@@ -1,11 +1,5 @@
-import random
-import asyncio
-import aiohttp
-from discord import Game
-from discord.ext.commands import Bot
+import discord
 
-
-BOT_PREFIX = ("?", "!")
 TOKEN = 'NDQ3NTAwMDAzOTIyMTQ5Mzc3.DeIeaQ.USPt4Bsnj0EagijHaIrwqZUsyo0'
 
 client = discord.Client()
