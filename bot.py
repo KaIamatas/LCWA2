@@ -14,11 +14,6 @@ async def on_message(message):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         
-@client.command()
-async def square(number):
-    squared_value = int(number) * int(number)
-    await client.say(str(number) + " squared is " + str(squared_value))
-
 
 @client.event
 async def on_ready():
