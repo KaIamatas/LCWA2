@@ -29,7 +29,7 @@ async def eight_ball(context):
 @client.command()
 async def square(number):
     squared_value = int(number) * int(number)
-    await client.say(str(number) + " squared is " + str(squared_value))
+    await client.say(str(number) + " This is the sqare " + str(squared_value))
 
 
 @client.event
