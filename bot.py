@@ -31,6 +31,14 @@ async def square(number):
     squared_value = int(number) * int(number)
     await client.say(str(number) + " This is the square " + str(squared_value))
 
+if message.content.startswith('!stat'):
+        mesg = await client.send_message(message.channel, 'Calculating...')
+        counter = 0
+        async for msg in client.logs_from(message.channel, limit=9999999):
+            if msg.author == message.author:
+                counter += 1
+        await client.edit_message(mesg, '{} has {} messages in {}.'.format(message.author, str(counter), message.channel))
+
 
 @client.event
 async def on_ready():
